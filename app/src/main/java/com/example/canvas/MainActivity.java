@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 Path path = new Path();
                 path.setFillType(Path.FillType.EVEN_ODD);
                 //4sisi
+
                 path.lineTo(a.x,a.y);
                 path.lineTo(b.x,b.y);
                 path.lineTo(c.x,c.y);
