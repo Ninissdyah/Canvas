@@ -50,8 +50,8 @@ public class Assignment extends AppCompatActivity {
         Point face2 = new Point(halfWidth+240, halfHeight-180);
         Point face3 = new Point(halfWidth, halfHeight+320);
 
-        Point leftEar = new Point(face1.x+170, face1.y-545);
-        Point rightEar = new Point(face2.x-170, face2.y-545);
+        Point leftEar = new Point(face1.x+170, face1.y-400);
+        Point rightEar = new Point(face2.x-170, face2.y-400);
 
         switch (frameCount) {
             case 0:
@@ -63,12 +63,12 @@ public class Assignment extends AppCompatActivity {
                 //draw ear
                 mPaint.setColor(colorBlack);
                 mCanvas.save();
-                mCanvas.drawOval(new RectF(leftEar.x-150, leftEar.y-100,
+                mCanvas.drawOval(new RectF(leftEar.x-300, leftEar.y-100,
                         leftEar.x+20, leftEar.y+320), mPaint);
                 mCanvas.restore();
 
                 mCanvas.save();
-                mCanvas.drawOval(new RectF(rightEar.x-20, rightEar.y-100, rightEar.x+150, rightEar.y+320), mPaint);
+                mCanvas.drawOval(new RectF(rightEar.x-20, rightEar.y-100, rightEar.x+300, rightEar.y+320), mPaint);
 //                canvas.rotate(-30, 200, 200);
                 mCanvas.restore();
                 break;
@@ -80,7 +80,7 @@ public class Assignment extends AppCompatActivity {
                 mCanvas.rotate(90, 200, 200); // Memutar canvas sebesar 90 derajat pada titik (200, 200)
                 mCanvas.scale(2, 1); // Mengubah skala pada sumbu X
                 //ingat ini di balik 90 derajat
-                mCanvas.drawOval(200, -600, 800, 320, mPaint);
+                mCanvas.drawOval(200, -600, 700, 320, mPaint);
                 mCanvas.restore(); // Mengembalikan kondisi sebelum transformasi
                 break;
 
@@ -108,8 +108,12 @@ public class Assignment extends AppCompatActivity {
                 mPaint.setColor(colorWhite);
                 mCanvas.drawCircle(face3.x, face3.y-100, 340, mPaint);
                 break;
-
             case 4:
+                //draw mulut
+                mPaint.setColor(colorBlack);
+                mCanvas.drawCircle(halfWidth, halfHeight+50, 140, mPaint);
+                break;
+            case 5:
                 getWindow().getDecorView().setBackgroundColor(colorWhite);
                 break;
             default:
