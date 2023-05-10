@@ -109,7 +109,7 @@ public class Assignment extends AppCompatActivity {
                 mCanvas.drawCircle(face3.x, face3.y-100, 340, mPaint);
                 break;
             case 4:
-                //draw mulut
+                //draw hidung
                 mPaint.setColor(colorBlack);
                 mCanvas.drawCircle(halfWidth, halfHeight+50, 140, mPaint);
                 break;
